@@ -1,0 +1,11 @@
+# Qwen2-VL alternative OCR engine (set OCR_ENGINE=qwen2vl)
+# Needs a GPU. Free Colab T4 (16GB VRAM) is enough for the 2B model.
+# NOT used on Vercel — too large, and there is no GPU there.
+#
+# Install with:  pip install -r requirements.txt -r requirements-qwen.txt
+
+torch>=2.2.0
+torchvision
+transformers>=4.46.0
+accelerate
+qwen-vl-utils

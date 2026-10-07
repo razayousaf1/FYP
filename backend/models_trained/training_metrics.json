@@ -1,0 +1,18 @@
+{
+  "macro_f1_group_aware_5fold_mean": 0.6316,
+  "macro_f1_group_aware_5fold_std": 0.1384,
+  "macro_f1_group_aware_per_fold": [
+    0.7562,
+    0.4946,
+    0.6137,
+    0.4727,
+    0.821
+  ],
+  "macro_f1_real_holdout_conservative": 0.3634,
+  "n_total": 1083,
+  "n_real_hand_collected": 32,
+  "n_synthetic": 1051,
+  "tuned_C": 2.5,
+  "meets_nfr04_target_group_aware": false,
+  "note": "A naive random-split F1 on this dataset is ~0.996 but is inflated by template leakage (see script docstring). The 5fold_mean number is what should be reported/defended - it's the average across 5 different group-aware splits, not one lucky split. real_holdout is a more conservative additional check using only hand-collected, non-templated data - hyperparameter tuning (C=2.5) improved 5fold_mean by ~3 points but did NOT move real_holdout at all, confirming the gap is a data problem (need more real documents), not a tuning problem."
+}

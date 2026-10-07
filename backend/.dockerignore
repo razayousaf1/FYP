@@ -1,0 +1,35 @@
+# Git and editor files
+.git/
+.gitignore
+.vscode/
+.idea/
+.DS_Store
+
+# Virtual environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets - never bake keys into the container.
+# On Cloud Run, Google credentials come from the service account instead.
+.env
+.env.*
+gcp-credentials.json
+
+# Local-only folders (not needed to run the API)
+temp_uploads/
+tests/
+
+# Notebooks and training-only material
+*.ipynb
+.ipynb_checkpoints/
+requirements-qwen.txt
+
+# Vercel files (not needed on Cloud Run)
+.vercel/
+.vercelignore
+index.py
+cloud_credentials.py

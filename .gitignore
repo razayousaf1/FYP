@@ -1,0 +1,4 @@
+node_modules
+qwen2vl_model/
+*.zip
+*.safetensors

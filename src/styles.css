@@ -1,0 +1,166 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --green: #1a6b3c;
+    --green-hover: #145730;
+    --green-light: #e8f5ee;
+    --green-pale: #f3fbf6;
+    --red: #c0392b;
+    --red-bg: #fdf1f0;
+    --yellow: #d97706;
+    --yellow-bg: #fffbeb;
+    --blue-bg: #eff6ff;
+    --blue: #1d4ed8;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --white: #ffffff;
+    --bg: #f9fafb;
+    --radius: 10px;
+    --shadow: 0 1px 6px rgba(0,0,0,0.07);
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  main {
+    min-height: calc(100vh - 60px - 220px);
+  }
+  
+  /* ── BUTTONS ── */
+  .btn {
+    display: inline-block;
+    padding: 11px 26px;
+    border-radius: var(--radius);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.2s;
+  }
+  .btn-green {
+    background: var(--green);
+    color: var(--white);
+  }
+  .btn-green:hover {
+    background: var(--green-hover);
+    transform: translateY(-1px);
+  }
+  .btn-outline {
+    background: var(--white);
+    color: var(--green);
+    border: 1.5px solid var(--green);
+  }
+  .btn-outline:hover {
+    background: var(--green-light);
+    transform: translateY(-1px);
+  }
+  
+  /* ── SECTION LABELS ── */
+  .section-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--green);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+  .section-sub {
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 520px;
+    margin-bottom: 36px;
+  }
+  
+  /* ── CARDS ── */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+  }
+  
+  /* ── FORM ELEMENTS ── */
+  input, textarea, select {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    color: var(--text);
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  input:focus, textarea:focus {
+    border-color: var(--green);
+  }
+  label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+  
+  /* ── RISK HIGHLIGHTS ── */
+  .h-red {
+    background: #fde8e8;
+    color: var(--red);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-weight: 700;
+  }
+  .h-yellow {
+    background: #fef3c7;
+    color: var(--yellow);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-weight: 700;
+  }
+  .h-blue {
+    background: var(--blue-bg);
+    color: var(--blue);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-weight: 700;
+  }
+  
+  /* ── LOADING BAR ── */
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  .loading-bar {
+    height: 3px;
+    background: linear-gradient(90deg, var(--green) 0%, #6ecf97 50%, var(--green) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s linear infinite;
+  }

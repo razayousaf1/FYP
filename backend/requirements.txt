@@ -1,0 +1,29 @@
+# Contract.AI backend — requirements for deployment (Vercel) and local dev
+# Uses Google Vision as the OCR engine (OCR_ENGINE=vision, the default).
+# Qwen2-VL dependencies live in requirements-qwen.txt (GPU only, e.g. Colab).
+
+# Core OCR module dependencies
+pdfplumber==0.11.4
+PyMuPDF==1.24.10
+python-docx==1.1.2
+Pillow==10.4.0
+
+# Risk detection (inference) and dictionary building
+# IMPORTANT: scikit-learn and numpy must match what trained
+# models_trained/*.joblib exactly, or unpickling breaks.
+scikit-learn==1.8.0
+joblib==1.5.3
+numpy==2.4.6
+openpyxl==3.1.5
+
+# Google Vision API (default OCR engine)
+google-cloud-vision==3.7.4
+
+# Firebase (remove this line if the backend doesn't import firebase_admin)
+firebase-admin==7.5.0
+
+# API server
+fastapi==0.115.0
+uvicorn==0.30.6
+python-multipart==0.0.9
+python-dotenv==1.0.1

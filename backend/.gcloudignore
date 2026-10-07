@@ -1,0 +1,35 @@
+# Files NOT uploaded to Google Cloud when deploying.
+# This replaces gcloud's default, which copies .gitignore and was
+# skipping the trained model files in models_trained/.
+
+.gcloudignore
+.git/
+.gitignore
+.vscode/
+.idea/
+.DS_Store
+
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets - never upload
+.env
+.env.*
+gcp-credentials.json
+
+# Local-only folders
+temp_uploads/
+tests/
+
+*.ipynb
+.ipynb_checkpoints/
+requirements-qwen.txt
+
+.vercel/
+.vercelignore
+index.py
+cloud_credentials.py

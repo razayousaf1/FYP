@@ -1,0 +1,52 @@
+# Environment / secrets
+venv/
+.env
+gcp-credentials.json
+*.json.key
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Trained model artifacts (regenerable by running scripts/train_risk_model.py)
+models_trained/*.pkl
+models_trained/*.joblib
+
+# OS
+.DS_Store
+
+temp_uploads/
+
+# Secrets - never commit
+.env
+.env.*
+!.env.example
+**/gcp-credentials.json
+*-credentials.json
+*service-account*.json
+
+# Python
+**/venv/
+**/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local runtime files
+backend/temp_uploads/
+
+# Node / frontend
+node_modules/
+.next/
+dist/
+build/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Cloud / deploy tooling
+.vercel/
