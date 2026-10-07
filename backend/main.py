@@ -132,7 +132,7 @@ async def unhandled_exception_handler(request: Request, exc: Exception):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:3000" , "https://fyp-opal-nine.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
