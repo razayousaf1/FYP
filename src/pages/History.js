@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getOrCreateSessionId } from '../utils/session';
 import './History.css';
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 function timeAgo(unixSeconds) {
   const seconds = Math.floor(Date.now() / 1000 - unixSeconds);

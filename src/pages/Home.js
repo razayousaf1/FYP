@@ -4,7 +4,7 @@ import { getOrCreateSessionId } from '../utils/session';
 import './Home.css';
 
 // Backend URL - change this if you deploy the backend somewhere other than localhost.
-const API_BASE = 'http://localhost:8000';
+const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 /* ── small sub-components ── */
 
